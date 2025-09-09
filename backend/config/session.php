@@ -4,7 +4,7 @@ return [
     'driver' => 'mongodb',     // Required
     'connection' => 'mongodb', // Database connection name, default is "mongodb"
     'table' => 'sessions',     // Collection name, default is "sessions"
-    'lifetime' => null,        // TTL of session in minutes, default is 120
+    'lifetime' => (int) env('SESSION_LIFETIME', 120),        // TTL of session in minutes, default is 120
     'options' => []            // Other driver options
 ];
 
