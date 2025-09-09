@@ -1,8 +1,27 @@
 <?php
 
-use Illuminate\Support\Str;
-
 return [
+    'driver' => 'mongodb',     // Required
+    'connection' => 'mongodb', // Database connection name, default is "mongodb"
+    'table' => 'sessions',     // Collection name, default is "sessions"
+    'lifetime' => null,        // TTL of session in minutes, default is 120
+    'options' => []            // Other driver options
+];
+
+// id_field: Custom field name for storing the session ID (default: _id)
+
+// data_field: Custom field name for storing the session data (default: data)
+
+// time_field: Custom field name for storing the timestamp (default: time)
+
+// expiry_field: Custom field name for storing the expiry timestamp (default: expires_at)
+
+// ttl: Time to live in seconds
+
+
+// use Illuminate\Support\Str;
+
+// return [
 
     /*
     |--------------------------------------------------------------------------
@@ -18,7 +37,7 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'database'),
+    // 'driver' => env('SESSION_DRIVER', 'database'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,9 +51,9 @@ return [
     |
     */
 
-    'lifetime' => (int) env('SESSION_LIFETIME', 120),
+    // 'lifetime' => (int) env('SESSION_LIFETIME', 120),
 
-    'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
+    // 'expire_on_close' => env('SESSION_EXPIRE_ON_CLOSE', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -47,7 +66,7 @@ return [
     |
     */
 
-    'encrypt' => env('SESSION_ENCRYPT', false),
+    // 'encrypt' => env('SESSION_ENCRYPT', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -60,7 +79,7 @@ return [
     |
     */
 
-    'files' => storage_path('framework/sessions'),
+    // 'files' => storage_path('framework/sessions'),
 
     /*
     |--------------------------------------------------------------------------
@@ -73,7 +92,7 @@ return [
     |
     */
 
-    'connection' => env('SESSION_CONNECTION'),
+    // 'connection' => env('SESSION_CONNECTION'),
 
     /*
     |--------------------------------------------------------------------------
@@ -86,7 +105,7 @@ return [
     |
     */
 
-    'table' => env('SESSION_TABLE', 'sessions'),
+    // 'table' => env('SESSION_TABLE', 'sessions'),
 
     /*
     |--------------------------------------------------------------------------
@@ -101,7 +120,7 @@ return [
     |
     */
 
-    'store' => env('SESSION_STORE'),
+    // 'store' => env('SESSION_STORE'),
 
     /*
     |--------------------------------------------------------------------------
@@ -114,7 +133,7 @@ return [
     |
     */
 
-    'lottery' => [2, 100],
+    // 'lottery' => [2, 100],
 
     /*
     |--------------------------------------------------------------------------
@@ -127,10 +146,10 @@ return [
     |
     */
 
-    'cookie' => env(
-        'SESSION_COOKIE',
-        Str::slug(env('APP_NAME', 'laravel')).'-session'
-    ),
+    // 'cookie' => env(
+        // 'SESSION_COOKIE',
+        // default: Str::slug(env('APP_NAME', 'laravel')).'-session'
+    // ),
 
     /*
     |--------------------------------------------------------------------------
@@ -143,7 +162,7 @@ return [
     |
     */
 
-    'path' => env('SESSION_PATH', '/'),
+    // 'path' => env('SESSION_PATH', '/'),
 
     /*
     |--------------------------------------------------------------------------
@@ -156,7 +175,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN'),
+    // 'domain' => env('SESSION_DOMAIN'),
 
     /*
     |--------------------------------------------------------------------------
@@ -169,7 +188,7 @@ return [
     |
     */
 
-    'secure' => env('SESSION_SECURE_COOKIE'),
+    // 'secure' => env('SESSION_SECURE_COOKIE'),
 
     /*
     |--------------------------------------------------------------------------
@@ -182,7 +201,7 @@ return [
     |
     */
 
-    'http_only' => env('SESSION_HTTP_ONLY', true),
+    // 'http_only' => env('SESSION_HTTP_ONLY', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -199,7 +218,7 @@ return [
     |
     */
 
-    'same_site' => env('SESSION_SAME_SITE', 'lax'),
+    // 'same_site' => env('SESSION_SAME_SITE', 'lax'),
 
     /*
     |--------------------------------------------------------------------------
@@ -212,6 +231,10 @@ return [
     |
     */
 
-    'partitioned' => env('SESSION_PARTITIONED_COOKIE', false),
+    // 'partitioned' => env('SESSION_PARTITIONED_COOKIE', false),
 
-];
+// ];
+
+
+
+
