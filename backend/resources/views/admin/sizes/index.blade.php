@@ -35,10 +35,10 @@
                                             <a href="{{route('admin.sizes.edit',$size->id)}}" class="btn btn-sm btn-warning">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a href="#" onclick="deleteItem({{$size->id}})" class="btn btn-sm btn-danger">
+                                            <a href="#" onclick="deleteItem('{{ $size->id }}')" class="btn btn-sm btn-danger">
                                                 <i class="fas fa-trash"></i>
                                             </a>
-                                            <form id="{{$size->id}}" action="{{route('admin.sizes.destroy',$size->id)}}" method="post">
+                                            <form id="delete-form-{{ $size->id }}" action="{{ route('admin.sizes.destroy', $size->id) }}" method="post" style="display: none;">
                                                 @csrf
                                                 @method('DELETE')
                                             </form>

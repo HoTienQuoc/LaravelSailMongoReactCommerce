@@ -35,10 +35,10 @@
                                             <a href="{{route('admin.colors.edit',$color->id)}}" class="btn btn-sm btn-warning">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a href="#" onclick="deleteItem({{$color->id}})" class="btn btn-sm btn-danger">
+                                            <a href="#" onclick="deleteItem('{{ $color->id }}')" class="btn btn-sm btn-danger">
                                                 <i class="fas fa-trash"></i>
                                             </a>
-                                            <form id="{{$color->id}}" action="{{route('admin.colors.destroy',$color->id)}}" method="post">
+                                            <form id="delete-form-{{ $color->id }}" action="{{ route('admin.colors.destroy', $color->id) }}" method="post" style="display: none;">
                                                 @csrf
                                                 @method('DELETE')
                                             </form>

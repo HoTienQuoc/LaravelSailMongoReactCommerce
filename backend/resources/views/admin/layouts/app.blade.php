@@ -148,7 +148,7 @@
                 confirmButtonText: 'Yes, delete it!'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    document.getElementById(id).submit();
+                    document.getElementById(`delete-form-${id}`).submit();
                 }
             });
         }
@@ -167,10 +167,14 @@
         }
 
         function handleImageInputChanged(input, image) {
-            document.getElementById(input).addEventListener('change', function () {
+            const inputEl = document.getElementById(input);
+            if (!inputEl) return; // Prevent error if element not found
+
+            inputEl.addEventListener('change', function () {
                 readUrl(this, image);
             });
         }
+
 
         handleImageInputChanged('thumbnail', 'thumbnail_preview');
         handleImageInputChanged('first_image', 'first_image_preview');
