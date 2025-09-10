@@ -12,12 +12,13 @@
                         Dashboard
                     </a>
                 </li>
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="{{route('admin.colors.index')}}">
                         <i class="fas fa-palette"></i>
                         Colors
                     </a>
                 </li>
+                {{--
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="{{route('admin.sizes.index')}}">
                         <i class="fas fa-expand"></i>
