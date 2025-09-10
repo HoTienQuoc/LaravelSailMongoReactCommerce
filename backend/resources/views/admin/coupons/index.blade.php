@@ -49,10 +49,10 @@
                                             <a href="{{route('admin.coupons.edit',$coupon->id)}}" class="btn btn-sm btn-warning">
                                                 <i class="fas fa-edit"></i>
                                             </a>
-                                            <a href="#" onclick="deleteItem({{$coupon->id}})" class="btn btn-sm btn-danger">
+                                            <a href="#" onclick="deleteItem('{{ $coupon->id }}')" class="btn btn-sm btn-danger">
                                                 <i class="fas fa-trash"></i>
                                             </a>
-                                            <form id="{{$coupon->id}}" action="{{route('admin.coupons.destroy',$coupon->id)}}" method="post">
+                                            <form id="delete-form-{{ $coupon->id }}" action="{{ route('admin.coupons.destroy', $coupon->id) }}" method="post" style="display: none;">
                                                 @csrf
                                                 @method('DELETE')
                                             </form>
