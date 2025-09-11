@@ -14,14 +14,8 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable, HasApiTokens, SoftDeletes;
-
-
     protected $connection = 'mongodb';
-
     protected $table = 'users';
-
-
-
     /**
      * The attributes that are mass assignable.
      *
@@ -39,7 +33,6 @@ class User extends Authenticatable
         'profile_image',
         'profile_completed'
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -49,11 +42,9 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
     protected $appends = [
         'image_path',
     ];
-
     /**
      * Get the attributes that should be cast.
      *
@@ -66,12 +57,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
     public function orders()
     {
         return $this->hasMany(Order::class)->with('products')->latest();
     }
-
     public function getImagePathAttribute()
     {
         if($this->profile_image)

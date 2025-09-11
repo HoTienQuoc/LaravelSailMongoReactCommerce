@@ -11,13 +11,8 @@ class Admin extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
-
     protected $connection = 'mongodb';
-
     protected $table = 'admins';
-
-
-
     /**
      * The attributes that are mass assignable.
      *
@@ -28,7 +23,6 @@ class Admin extends Authenticatable
         'email',
         'password',
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
