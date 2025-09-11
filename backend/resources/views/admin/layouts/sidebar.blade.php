@@ -18,28 +18,25 @@
                         Colors
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="{{route('admin.sizes.index')}}">
                         <i class="fas fa-expand"></i>
                         Sizes
                     </a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="{{route('admin.coupons.index')}}">
                         <i class="fas fa-ticket"></i>
                         Coupons
                     </a>
                 </li>
-
-                {{--
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="{{route('admin.products.index')}}">
                         <i class="fas fa-tags"></i>
                         Products
                     </a>
                 </li>
+                {{--
                 <li class="nav-item">
                     <a class="nav-link d-flex align-items-center gap-2" aria-current="page" href="{{route('admin.orders.index')}}">
                         <i class="fas fa-cart-shopping"></i>
