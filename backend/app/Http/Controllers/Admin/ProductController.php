@@ -151,7 +151,6 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        dd($product);
         //remove the product images
         $this->removeProductImageFromStorage($product->thumbnail);
         $this->removeProductImageFromStorage($product->first_image);

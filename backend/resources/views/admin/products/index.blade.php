@@ -101,7 +101,7 @@
                                             <a href="#" onclick="deleteItem('{{ $product->id }}')" class="btn btn-sm btn-danger">
                                                 <i class="fas fa-trash"></i>
                                             </a>
-                                            <form id="delete-form-{{ $product->id }}" action="{{ route('admin.products.destroy', $product->id) }}" method="post" style="display: none;">
+                                            <form id="delete-form-{{ $product->id }}" action="{{ route('admin.products.destroy', $product->slug) }}" method="post" style="display: none;">
                                                 @csrf
                                                 @method('DELETE')
                                             </form>

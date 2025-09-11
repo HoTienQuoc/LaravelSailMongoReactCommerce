@@ -16,12 +16,19 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Review extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
+
+    protected $connection = 'mongodb';
+
+    protected $table = 'reviews';
 
     protected $fillable = [
         'title', 'body', 'user_id', 'approved',
         'rating', 'product_id'
     ];
+
+    protected $keyType = 'string';
+
 
     public function user(): BelongsTo
     {
